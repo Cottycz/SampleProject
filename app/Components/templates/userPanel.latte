@@ -1,0 +1,66 @@
+{block content}
+{if !$user->loggedIn}
+    {form signInForm}
+        {label username}
+        {input username}
+        {label password}
+        {input password}
+        <hr/>
+        <div style="float: left">{input submit}</div>
+        <div style="float: right">{input register}</div>
+    {/form}
+{else}
+    <div style="text-align: center">
+        <h3>Vítejte uživateli!</h3>
+        <button class="btn login-block-btn" data-toggle="modal" data-target="#create-article">Napsat článek</button>
+        <button class="btn login-block-btn" data-toggle="modal" data-target="#change-password">Změnit heslo</button>
+        <button class="btn login-block-btn"><a n:href=":Out">Odhlásit se</a></button>
+    </div>
+    <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="change-password"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Změna hesla</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body form-group">
+                    {form changePassword}
+                        {label password}
+                        {input password}
+                        <hr/>
+                        {input changePassword}
+                    {/form}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="create-article" tabindex="-1" role="dialog" aria-labelledby="create-article"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Vytvoření novinky</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body form-group">
+                    {form createArticle}
+                        {label subject}
+                        {input subject}
+                        {label message}
+                        {input message}
+                        {label loggedonly}
+                        {input loggedonly}
+                        <hr/>
+                        {input submit}
+                    {/form}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/if}

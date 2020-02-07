@@ -1,0 +1,100 @@
+{block content}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Radek Chalupa">
+    <title>Radek's Blog</title>
+
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <h2> Radek's Blog</h2>
+        </div>
+    </div>
+    </div>
+</header>
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="content col-md-8 col-sm-12 col-xs-12">
+                <div class="section-block">
+                    <div class="section-tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#news" aria-controls="news" role="tab"
+                                                                      data-toggle="tab">Novinky</a></li>
+                            <li role="presentation"><a href="#about" aria-controls="about" role="tab"
+                                                       data-toggle="tab">O mně</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-block">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="news">
+                            <div class="update-information">
+                                <h1 class="section-title">NOVINKY</h1>
+                                {include 'news.latte'}
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="about">
+                            <div class="about-information">
+                                <h1 class="section-title">O MNĚ</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam erat volutpat.
+                                    Nullam sit amet magna in magna gravida vehicula. Morbi scelerisque luctus velit.
+                                    Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Aenean
+                                    vel massa quis mauris vehicula lacinia. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Etiam
+                                    sapien elit, consequat eget, tristique non, venenatis quis, ante. Sed convallis
+                                    magna eu sem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Ut enim ad minim
+                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. In enim a arcu imperdiet malesuada. Mauris metus. Morbi leo mi, nonummy
+                                    eget tristique non, rhoncus non leo. Integer vulputate sem a nibh rutrum consequat.
+                                    Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis
+                                    enim ipsum id lacus. Vestibulum fermentum tortor id mi. Ut tempus purus at
+                                    lorem.</p>
+
+                                <p>Phasellus et lorem id felis nonummy placerat. Nullam justo enim, consectetuer nec,
+                                    ullamcorper ac, vestibulum in, elit. Nam quis nulla. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. In
+                                    dapibus augue non sapien. Vestibulum fermentum tortor id mi. Etiam posuere lacus
+                                    quis dolor. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero,
+                                    eget facilisis enim ipsum id lacus. Etiam dictum tincidunt diam. Fusce tellus odio,
+                                    dapibus id fermentum quis, suscipit id erat.</p>
+
+                                <p>Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Phasellus rhoncus.
+                                    Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Etiam ligula pede,
+                                    sagittis quis, interdum ultricies, scelerisque eu. Fusce dui leo, imperdiet in,
+                                    aliquam sit amet, feugiat eu, orci. In enim a arcu imperdiet malesuada. Nullam
+                                    rhoncus aliquam metus. Nullam feugiat, turpis at pulvinar vulputate, erat libero
+                                    tristique tellus, nec bibendum odio risus sit amet ante. In convallis. Etiam dictum
+                                    tincidunt diam. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis
+                                    quam, tempor suscipit diam nulla vel leo. Duis risus. Nullam lectus justo, vulputate
+                                    eget mollis sed, tempor sed magna. Fusce aliquam vestibulum ipsum. Maecenas
+                                    libero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content col-md-4 col-sm-12 col-xs-12">
+                <div class="section-block">
+                    <h1 class="section-title" style="text-align: center;">Přihlášení</h1>
+                    <div class="login-block">
+                        {control userPanel}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <span class="copyright">Created as review code by Radek Chalupa</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

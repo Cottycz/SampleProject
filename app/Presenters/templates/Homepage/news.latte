@@ -1,0 +1,36 @@
+{foreach $news as $article}
+    {if $article->loggedonly === 1}
+        {if $user->loggedIn}
+            <div class="news">
+                <h4 class="news-title">{$article->subject}</h4>
+                <span class="news-date">Datum: {$article->system_created|date:'%d.%m.%Y'} | Users only |
+                <a n:href="removeArticle!, $article->id">Odstranit příspěvek</a></span>
+                <p>{$article->message}</p>
+            </div>
+        {/if}
+    {else}
+        <div class="news">
+            <h4 class="news-title">{$article->subject}</h4>
+            <span class="news-date">Datum: {$article->system_created|date:'%d.%m.%Y'} {if $user->loggedIn} |
+                <a n:href="removeArticle!, $article->id">Odstranit příspěvek</a>{/if}</span>
+            <p>{$article->message}</p>
+        </div>
+    {/if}
+{/foreach}
+<div class="pagination" style="text-align: center;">
+    {if !$paginator->isFirst()}
+        <a n:href="default, 1">První</a>
+        &nbsp;|&nbsp;
+        <a n:href="default, $paginator->page-1">Předchozí</a>
+        &nbsp;|&nbsp;
+    {/if}
+
+    Stránka {$paginator->page} z {$paginator->pageCount}
+
+    {if !$paginator->isLast()}
+        &nbsp;|&nbsp;
+        <a n:href="default, $paginator->page+1">Další</a>
+        &nbsp;|&nbsp;
+        <a n:href="default, $paginator->pageCount">Poslední</a>
+    {/if}
+</div>

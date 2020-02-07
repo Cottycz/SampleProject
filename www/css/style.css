@@ -1,0 +1,130 @@
+/*-Default-*/
+
+body {
+	background-color:#ECEBEB;
+	font-family: 'Open Sans', sans-serif;
+}
+p {
+	color:#A7A7A7;
+}
+a { 
+	color: cornflowerblue;
+}
+
+/*-Header-*/
+.header {
+	background-color: cornflowerblue;
+	border-bottom: 5px solid cornflowerblue;
+	padding: 30px 0px;
+	color: white;
+}
+
+/*-Section Blocks-*/
+.section-block {
+	background-color: #F7F7F7;
+	border-radius:4px;
+	padding: 30px;
+	margin-bottom:30px;
+}
+.section-block h1 {
+	margin-top:0;
+}
+.section-title {
+	color: cornflowerblue;
+	border-radius: 4px;
+	padding: 10px 0px;
+	font-size: 25px;
+	font-weight:700;
+}
+
+/*-Main Content-*/
+.main-content {
+	padding:40px 0px;
+}
+
+/*-Nav-*/
+.nav-tabs {
+	border:0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: #FFF;
+	background-color: cornflowerblue;
+	border: 0;
+	border-radius: 4px;
+	font-weight:700;
+}
+.nav-tabs>li>a, .nav-tabs>li>a:hover {
+	border:0;
+	margin-right: 10px;
+	color:#A7A7A7;
+}
+.tab-content .section-title {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #E2E2E2;
+	display: block;
+}
+
+/*-News-*/
+.news {
+	margin-bottom: 30px;
+	padding: 10px;
+	background-color: #FDFDFD;
+	border-radius: 4px;
+}
+.news .news-title {
+	margin: 10px 0px;
+	font-weight: 700;
+}
+.news .news-date {
+	margin: 0px 0px 15px 0px;
+	display: block;
+	color: #A7A7A7;
+	font-size: 12px;
+}
+.news p {
+	color: black;
+}
+
+/*-Login block-*/
+.login-block {
+	padding: 40px;
+	background-color: #FFF;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.login-block a {
+	padding-top: 5px;
+	text-decoration: none;
+	color: black;
+}
+.login-block a:hover {
+	color: black;
+}
+
+.login-block-btn {
+	margin-top: 5px;
+}
+
+/*-Footer-*/
+.footer {
+	background-color: cornflowerblue;
+	padding: 10px;
+	text-align:center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.copyright {
+	color:#F7F7F7;
+	width:100%;
+	bottom:5px;
+}
+div.alert-warning {
+	background: #ffe6e6;
+	border: 1px solid red;
+}
+div.alert-success {
+	background: lightgreen;
+	border: 1px solid green;
+}
